@@ -2,7 +2,7 @@ const {Router} = require('express')
 
 const router = Router();
 
-router.get('/tasks', (req, res) => {
+router.get('/tasks', async (req, res) => {
     res.send('Hola')
 })
 
