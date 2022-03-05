@@ -8,5 +8,9 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(rutas)
 
+app.use((err, req, res, next) => {
+    return res.json({message: err.message})
+})
+
 app.listen(3000)
 console.log('Server on port 3000')
